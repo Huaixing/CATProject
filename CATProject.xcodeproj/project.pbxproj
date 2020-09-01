@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93FE677824FE116B0031FC9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE677724FE116B0031FC9E /* AppDelegate.m */; };
-		93FE677B24FE116B0031FC9E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE677A24FE116B0031FC9E /* SceneDelegate.m */; };
-		93FE677E24FE116B0031FC9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE677D24FE116B0031FC9E /* ViewController.m */; };
-		93FE678124FE116B0031FC9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FE677F24FE116B0031FC9E /* Main.storyboard */; };
+		93FE677824FE116B0031FC9E /* CATAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE677724FE116B0031FC9E /* CATAppDelegate.m */; };
 		93FE678324FE116F0031FC9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93FE678224FE116F0031FC9E /* Assets.xcassets */; };
 		93FE678624FE116F0031FC9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FE678424FE116F0031FC9E /* LaunchScreen.storyboard */; };
 		93FE678924FE116F0031FC9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE678824FE116F0031FC9E /* main.m */; };
+		93FE6D0124FE6DE80031FC9E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93FE6D0024FE6DE80031FC9E /* Default-568h@2x.png */; };
+		93FE6D0724FE6EB40031FC9E /* CATBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE6D0624FE6EB40031FC9E /* CATBaseViewController.m */; };
+		93FE6D0A24FE6ED60031FC9E /* CATHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE6D0924FE6ED60031FC9E /* CATHomeViewController.m */; };
+		93FE6D0E24FE716A0031FC9E /* CATNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE6D0D24FE716A0031FC9E /* CATNavigationController.m */; };
+		93FE6D1124FE717D0031FC9E /* CATTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE6D1024FE717D0031FC9E /* CATTabBarController.m */; };
+		93FE6D1424FE71940031FC9E /* CATProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE6D1324FE71940031FC9E /* CATProfileViewController.m */; };
 		EBC4930FF7318819F6305CCA /* libPods-CATProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF4A8EBD34034F93E1A963C /* libPods-CATProject.a */; };
 /* End PBXBuildFile section */
 
@@ -22,17 +25,23 @@
 		3C297C5878AC43B2B573420F /* Pods-CATProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATProject.debug.xcconfig"; path = "Target Support Files/Pods-CATProject/Pods-CATProject.debug.xcconfig"; sourceTree = "<group>"; };
 		61F4BA30D109FAAEB1230943 /* Pods-CATProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATProject.release.xcconfig"; path = "Target Support Files/Pods-CATProject/Pods-CATProject.release.xcconfig"; sourceTree = "<group>"; };
 		93FE677324FE116B0031FC9E /* CATProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		93FE677624FE116B0031FC9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		93FE677724FE116B0031FC9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		93FE677924FE116B0031FC9E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		93FE677A24FE116B0031FC9E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		93FE677C24FE116B0031FC9E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		93FE677D24FE116B0031FC9E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		93FE678024FE116B0031FC9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93FE677624FE116B0031FC9E /* CATAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATAppDelegate.h; sourceTree = "<group>"; };
+		93FE677724FE116B0031FC9E /* CATAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATAppDelegate.m; sourceTree = "<group>"; };
 		93FE678224FE116F0031FC9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93FE678524FE116F0031FC9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93FE678724FE116F0031FC9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93FE678824FE116F0031FC9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93FE6D0024FE6DE80031FC9E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		93FE6D0524FE6EB40031FC9E /* CATBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATBaseViewController.h; sourceTree = "<group>"; };
+		93FE6D0624FE6EB40031FC9E /* CATBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATBaseViewController.m; sourceTree = "<group>"; };
+		93FE6D0824FE6ED60031FC9E /* CATHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATHomeViewController.h; sourceTree = "<group>"; };
+		93FE6D0924FE6ED60031FC9E /* CATHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATHomeViewController.m; sourceTree = "<group>"; };
+		93FE6D0C24FE716A0031FC9E /* CATNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATNavigationController.h; sourceTree = "<group>"; };
+		93FE6D0D24FE716A0031FC9E /* CATNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATNavigationController.m; sourceTree = "<group>"; };
+		93FE6D0F24FE717D0031FC9E /* CATTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATTabBarController.h; sourceTree = "<group>"; };
+		93FE6D1024FE717D0031FC9E /* CATTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATTabBarController.m; sourceTree = "<group>"; };
+		93FE6D1224FE71940031FC9E /* CATProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATProfileViewController.h; sourceTree = "<group>"; };
+		93FE6D1324FE71940031FC9E /* CATProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,7 @@
 		93FE676A24FE116B0031FC9E = {
 			isa = PBXGroup;
 			children = (
+				93FE6D0024FE6DE80031FC9E /* Default-568h@2x.png */,
 				93FE677524FE116B0031FC9E /* CATProject */,
 				93FE677424FE116B0031FC9E /* Products */,
 				24F227E3199CF016E89152EF /* Pods */,
@@ -85,19 +95,64 @@
 		93FE677524FE116B0031FC9E /* CATProject */ = {
 			isa = PBXGroup;
 			children = (
-				93FE677624FE116B0031FC9E /* AppDelegate.h */,
-				93FE677724FE116B0031FC9E /* AppDelegate.m */,
-				93FE677924FE116B0031FC9E /* SceneDelegate.h */,
-				93FE677A24FE116B0031FC9E /* SceneDelegate.m */,
-				93FE677C24FE116B0031FC9E /* ViewController.h */,
-				93FE677D24FE116B0031FC9E /* ViewController.m */,
-				93FE677F24FE116B0031FC9E /* Main.storyboard */,
+				93FE677624FE116B0031FC9E /* CATAppDelegate.h */,
+				93FE677724FE116B0031FC9E /* CATAppDelegate.m */,
+				93FE6D0224FE6E740031FC9E /* Classes */,
+				93FE6CFF24FE6DC90031FC9E /* Others */,
+			);
+			path = CATProject;
+			sourceTree = "<group>";
+		};
+		93FE6CFF24FE6DC90031FC9E /* Others */ = {
+			isa = PBXGroup;
+			children = (
 				93FE678224FE116F0031FC9E /* Assets.xcassets */,
 				93FE678424FE116F0031FC9E /* LaunchScreen.storyboard */,
 				93FE678724FE116F0031FC9E /* Info.plist */,
 				93FE678824FE116F0031FC9E /* main.m */,
 			);
-			path = CATProject;
+			path = Others;
+			sourceTree = "<group>";
+		};
+		93FE6D0224FE6E740031FC9E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				93FE6D0424FE6E990031FC9E /* Common */,
+				93FE6D0B24FE714C0031FC9E /* Profile */,
+				93FE6D0324FE6E7F0031FC9E /* Home */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		93FE6D0324FE6E7F0031FC9E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				93FE6D0824FE6ED60031FC9E /* CATHomeViewController.h */,
+				93FE6D0924FE6ED60031FC9E /* CATHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		93FE6D0424FE6E990031FC9E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				93FE6D0524FE6EB40031FC9E /* CATBaseViewController.h */,
+				93FE6D0624FE6EB40031FC9E /* CATBaseViewController.m */,
+				93FE6D0C24FE716A0031FC9E /* CATNavigationController.h */,
+				93FE6D0D24FE716A0031FC9E /* CATNavigationController.m */,
+				93FE6D0F24FE717D0031FC9E /* CATTabBarController.h */,
+				93FE6D1024FE717D0031FC9E /* CATTabBarController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		93FE6D0B24FE714C0031FC9E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				93FE6D1224FE71940031FC9E /* CATProfileViewController.h */,
+				93FE6D1324FE71940031FC9E /* CATProfileViewController.m */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +215,7 @@
 			files = (
 				93FE678624FE116F0031FC9E /* LaunchScreen.storyboard in Resources */,
 				93FE678324FE116F0031FC9E /* Assets.xcassets in Resources */,
-				93FE678124FE116B0031FC9E /* Main.storyboard in Resources */,
+				93FE6D0124FE6DE80031FC9E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,24 +251,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93FE677E24FE116B0031FC9E /* ViewController.m in Sources */,
-				93FE677824FE116B0031FC9E /* AppDelegate.m in Sources */,
+				93FE6D0724FE6EB40031FC9E /* CATBaseViewController.m in Sources */,
+				93FE677824FE116B0031FC9E /* CATAppDelegate.m in Sources */,
+				93FE6D0A24FE6ED60031FC9E /* CATHomeViewController.m in Sources */,
 				93FE678924FE116F0031FC9E /* main.m in Sources */,
-				93FE677B24FE116B0031FC9E /* SceneDelegate.m in Sources */,
+				93FE6D1124FE717D0031FC9E /* CATTabBarController.m in Sources */,
+				93FE6D1424FE71940031FC9E /* CATProfileViewController.m in Sources */,
+				93FE6D0E24FE716A0031FC9E /* CATNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93FE677F24FE116B0031FC9E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93FE678024FE116B0031FC9E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93FE678424FE116F0031FC9E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,13 +391,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = 2P66JWV7UM;
-				INFOPLIST_FILE = CATProject/Info.plist;
+				INFOPLIST_FILE = CATProject/Others/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Monkey.CATProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -360,13 +412,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = 2P66JWV7UM;
-				INFOPLIST_FILE = CATProject/Info.plist;
+				INFOPLIST_FILE = CATProject/Others/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Monkey.CATProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

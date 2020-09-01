@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CATBaseViewController.h
 //  CATProject
 //
 //  Created by Shihuaixing on 2020/9/1.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+NS_ASSUME_NONNULL_BEGIN
 
+@interface CATBaseViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

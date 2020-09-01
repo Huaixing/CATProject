@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CATAppDelegate.h
 //  CATProject
 //
 //  Created by Shihuaixing on 2020/9/1.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CATAppDelegate : UIResponder <UIApplicationDelegate>
 
+/**main window*/
+@property (nonatomic, strong) UIWindow *window;
 
 @end
 
