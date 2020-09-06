@@ -8,7 +8,7 @@
 
 #import "CATAppDelegate.h"
 
-#import "CATHomeViewController.h"
+#import "CATTabBarController.h"
 
 @interface CATAppDelegate ()
 
@@ -22,8 +22,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    CATHomeViewController *home = [[CATHomeViewController alloc] init];
-    self.window.rootViewController = home;
+    
+    CATTabBarController *tabBar = [[CATTabBarController alloc] init];
+    self.window.rootViewController = tabBar;
     
     [self.window makeKeyAndVisible];
     return YES;

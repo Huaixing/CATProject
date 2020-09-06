@@ -1,22 +1,27 @@
 //
-//  CATBaseViewController.m
+//  CATDetailViewController.m
 //  CATProject
 //
-//  Created by Shihuaixing on 2020/9/1.
+//  Created by Shihuaixing on 2020/9/5.
 //  Copyright © 2020 Shihuaixing. All rights reserved.
 //
 
-#import "CATBaseViewController.h"
+#import "CATDetailViewController.h"
 
-@interface CATBaseViewController ()
+@interface CATDetailViewController ()
 
 @end
 
-@implementation CATBaseViewController
+@implementation CATDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.leftNaviButtonItem = [[CATNaviButtonItem alloc] initWithImageName:@"cat_navigation_bar_black_back_icon" title:@"返回"];
 }
 
 /*

@@ -8,26 +8,48 @@
 
 #import "CATHomeViewController.h"
 
+
+#import "CATDetailViewController.h"
+
 @interface CATHomeViewController ()
 
+/**imageview*/
+@property (nonatomic, strong) UIImageView *imageView;
 @end
 
 @implementation CATHomeViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.titleString = @"首页";
+        self.leftNaviButtonItem = [[CATNaviButtonItem alloc] initWithImageName:@"cat_navigation_bar_black_back_icon" title:@"返回"];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 0, 100, 200)];
+    [self.view addSubview:_imageView];
+    
+    
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://testlib.qbb6.com/content/1847783988641_97fa7e68935b.png"]];
+    UIImage *image = [UIImage imageWithData:data];
+    _imageView.image = image;
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
-*/
+
+- (void)leftNaviButtonItemDidClick:(CATNaviButtonItem *)sender {
+    
+    CATDetailViewController *detail = [[CATDetailViewController alloc] init];
+    [self cat_pushVieController:detail animated:YES];
+}
 
 @end

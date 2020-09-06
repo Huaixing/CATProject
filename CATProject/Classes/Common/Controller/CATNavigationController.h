@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CATNavigationBar;
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface CATNavigationController : UINavigationController
+/// custom navigation bar
+@property (nonatomic, strong, readonly) CATNavigationBar *navigatorBar;
 
 @end
 
-NS_ASSUME_NONNULL_END
