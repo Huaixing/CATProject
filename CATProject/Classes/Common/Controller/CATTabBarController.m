@@ -35,10 +35,10 @@
 
 #pragma mark - Private
 - (void)addChildViewControllers {
-    
+    // home
     CATHomeViewController *home = [[CATHomeViewController alloc] init];
     CATNavigationController *homeNavi = [self subControllerWithRootController:home title:NSLocalizedString(@"ipets_tab_bar_home", nil) imageName:@"cat_tab_bar_profile_unselected_icon" selectedImageName:@"cat_tab_bar_profile_selected_icon"];
-    
+    // profile
     CATProfileViewController *profile = [[CATProfileViewController alloc] init];
     CATNavigationController *profileNavi = [self subControllerWithRootController:profile title:NSLocalizedString(@"ipets_tab_bar_profile", nil) imageName:@"cat_tab_bar_profile_unselected_icon" selectedImageName:@"cat_tab_bar_profile_selected_icon"];
     

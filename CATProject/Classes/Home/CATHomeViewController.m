@@ -32,7 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 0, 100, 200)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 88, 100, 200)];
     [self.view addSubview:_imageView];
     
     
