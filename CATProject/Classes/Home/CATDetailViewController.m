@@ -7,8 +7,16 @@
 //
 
 #import "CATDetailViewController.h"
+#import <CATTextKit.h>
+#import "UIView+CATSize.h"
+#import "CATCommonMacro.h"
 
 @interface CATDetailViewController ()
+
+/// textv iew
+@property (nonatomic, strong) CATTextView *textView;
+/// <#comment#>
+@property (nonatomic, strong) CATKeyboardBar *keyboardBar;
 
 @end
 
@@ -17,12 +25,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _textView = [[CATTextView alloc] initWithFrame:CGRectMake(0, 100, self.view.width, 300)];
+    _textView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:_textView];
+    
+    CGFloat barHeight = 64;
+    _keyboardBar = [[CATKeyboardBar alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - barHeight, CGRectGetWidth(self.view.frame), barHeight)];
+    _keyboardBar.backgroundColor = [UIColor redColor];
+//    _keyboardBar.delegate = self;
+    [self.view addSubview:_keyboardBar];
 }
 
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.leftNaviButtonItem = [[CATNaviButtonItem alloc] initWithImageName:@"cat_navigation_bar_black_back_icon" title:@"返回"];
-}
 
 /*
 #pragma mark - Navigation

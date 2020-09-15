@@ -16,6 +16,6 @@
 #define COLOR_HEX(hexString)                [UIColor colorWithRed:((float)((hexString & 0xFF0000) >> 16)) / 255.0 green:((float)((hexString & 0xFF00) >> 8)) / 255.0 blue:((float)(hexString & 0xFF)) / 255.0 alpha:1]
 
 // controller common color
-#define COLOR_COMMON_CONTROLLER             [UIColor colorWithRed:((float)((0xF5F5F5 & 0xFF0000) >> 16)) / 255.0 green:((float)((0xF5F5F5 & 0xFF00) >> 8)) / 255.0 blue:((float)(0xF5F5F5 & 0xFF)) / 255.0 alpha:1]
+#define COLOR_CONTROLLER_BACKGROUND         [UIColor colorWithRed:((float)((0xF5F5F5 & 0xFF0000) >> 16)) / 255.0 green:((float)((0xF5F5F5 & 0xFF00) >> 8)) / 255.0 blue:((float)(0xF5F5F5 & 0xFF)) / 255.0 alpha:1]
 
 #endif /* CATCommonMacro_h */

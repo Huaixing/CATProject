@@ -28,8 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = COLOR_COMMON_CONTROLLER;
+    self.view.backgroundColor = COLOR_CONTROLLER_BACKGROUND;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

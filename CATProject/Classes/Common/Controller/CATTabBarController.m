@@ -37,18 +37,21 @@
 - (void)addChildViewControllers {
     
     CATHomeViewController *home = [[CATHomeViewController alloc] init];
-    CATNavigationController *homeNavi = [self subControllerWithRootController:home title:@"首页"];
+    CATNavigationController *homeNavi = [self subControllerWithRootController:home title:NSLocalizedString(@"ipets_tab_bar_home", nil) imageName:@"cat_tab_bar_profile_unselected_icon" selectedImageName:@"cat_tab_bar_profile_selected_icon"];
     
     CATProfileViewController *profile = [[CATProfileViewController alloc] init];
-    CATNavigationController *profileNavi = [self subControllerWithRootController:profile title:@"我"];
+    CATNavigationController *profileNavi = [self subControllerWithRootController:profile title:NSLocalizedString(@"ipets_tab_bar_profile", nil) imageName:@"cat_tab_bar_profile_unselected_icon" selectedImageName:@"cat_tab_bar_profile_selected_icon"];
     
     self.viewControllers = @[homeNavi, profileNavi];
 }
 
-- (CATNavigationController *)subControllerWithRootController:(CATBaseViewController *)controller title:(NSString *)title {
+- (CATNavigationController *)subControllerWithRootController:(CATBaseViewController *)controller title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
     
-    controller.title = title;
     CATNavigationController *naviController = [[CATNavigationController alloc] initWithRootViewController:controller];
+    controller.navigationItem.title = title;
+    controller.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    controller.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    controller.tabBarItem.title = title;
     return naviController;
 }
 

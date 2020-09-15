@@ -1,16 +1,20 @@
 PODS:
   - CATPhotoKit (0.1.3)
+  - CATTextKit (0.1.6)
 
 DEPENDENCIES:
   - CATPhotoKit (= 0.1.3)
+  - CATTextKit (= 0.1.6)
 
 SPEC REPOS:
   https://github.com/Huaixing/CATMasterRepos.git:
     - CATPhotoKit
+    - CATTextKit
 
 SPEC CHECKSUMS:
   CATPhotoKit: 8a54d76af3b88c17d296d8a763371325623a435b
+  CATTextKit: 48d7ef2c4d96583d9c4393f0cdcf4b3ddd1952c1
 
-PODFILE CHECKSUM: 38a89e2780583297bc101777bcd0da6b8053370b
+PODFILE CHECKSUM: f8d0b6c0f0385f0d3c57fb48d845a0ed43d3eeab
 
 COCOAPODS: 1.9.3

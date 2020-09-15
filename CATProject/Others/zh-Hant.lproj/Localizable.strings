@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CATProject
+
+  Created by Shihuaixing on 2020/9/15.
+  Copyright © 2020 Shihuaixing. All rights reserved.
+*/
+
+"ipets_tab_bar_home" = "首页";
+"ipets_tab_bar_profile" = "我";

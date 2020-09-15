@@ -6,4 +6,5 @@ inhibit_all_warnings!
 
 target 'CATProject' do
   pod 'CATPhotoKit', '0.1.3'
+  pod 'CATTextKit', '0.1.6'
 end
