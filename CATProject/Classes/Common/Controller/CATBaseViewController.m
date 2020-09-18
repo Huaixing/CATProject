@@ -108,6 +108,17 @@
     [self.navigationController pushViewController:controller animated:animated];
 }
 
+- (void)cat_presentVieController:(CATBaseViewController *)controller animated:(BOOL)animated completion:(void (^)(void))completion {
+    
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
+    if (![controller isKindOfClass:[UINavigationController class]]) {
+        CATNavigationController *navi = [[CATNavigationController alloc] initWithRootViewController:controller];
+        [self presentViewController:navi animated:animated completion:completion];
+    } else {
+        [self presentViewController:controller animated:animated completion:completion];
+    }
+}
+
 #pragma mark - Action
 - (void)leftNaviButtonItemDidClick:(CATNaviButtonItem *)sender {
     

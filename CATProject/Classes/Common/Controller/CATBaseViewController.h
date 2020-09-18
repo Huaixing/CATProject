@@ -27,7 +27,11 @@
 /// right button item, default is nil
 @property (nonatomic, strong) CATNaviButtonItem *rightNaviButtonItem;
 
+
+///  push controller
 - (void)cat_pushVieController:(CATBaseViewController *)controller animated:(BOOL)animated;
+///  present controller
+- (void)cat_presentVieController:(CATBaseViewController *)controller animated:(BOOL)animated completion:(void (^)(void))completion;
 
 
 #pragma mark - Action

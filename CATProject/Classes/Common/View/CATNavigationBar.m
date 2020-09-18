@@ -10,7 +10,6 @@
 #import "CATCommonMacro.h"
 #import "CATNaviButtonItem.h"
 #import "UIView+CATSize.h"
-#import "NSString+CAT.h"
 
  /// 导航栏按钮距离左右按钮间距
 #define CAT_NAVI_BUTTON_ITEM_MARGIN        (16)

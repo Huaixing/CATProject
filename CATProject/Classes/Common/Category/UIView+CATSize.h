@@ -23,6 +23,10 @@
 @property (nonatomic, assign) CGFloat centerY;
 @property (nonatomic, assign) CGSize  size;
 
+/// 选择栏底部留白，刘海屏适配
++ (CGFloat)bottomInset;
++ (CGFloat)statusBarHeight;
+
 @end
 
 

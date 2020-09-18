@@ -7,7 +7,6 @@
 //
 
 #import "CATNaviButtonItem.h"
-#import "NSString+CAT.h"
 #import "NSString+CATSize.h"
 #import "UIView+CATSize.h"
 #import "CATCommonMacro.h"

@@ -7,7 +7,6 @@
 //
 
 #import "NSString+CATSize.h"
-#import "NSString+CAT.h"
 
 @implementation NSString (CATSize)
 

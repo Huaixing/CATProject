@@ -9,7 +9,7 @@
 #import "CATHomeViewController.h"
 
 
-#import "CATDetailViewController.h"
+#import "CATComposeViewController.h"
 
 @interface CATHomeViewController ()
 
@@ -22,7 +22,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.titleString = @"首页";
+        
         self.leftNaviButtonItem = [[CATNaviButtonItem alloc] initWithImageName:@"cat_navigation_bar_black_back_icon" title:@"返回"];
     }
     return self;
@@ -48,8 +48,9 @@
 
 - (void)leftNaviButtonItemDidClick:(CATNaviButtonItem *)sender {
     
-    CATDetailViewController *detail = [[CATDetailViewController alloc] init];
-    [self cat_pushVieController:detail animated:YES];
+    CATComposeViewController *detail = [[CATComposeViewController alloc] init];
+    [self cat_presentVieController:detail animated:YES completion:nil];
+//    [self cat_pushVieController:detail animated:YES];
 }
 
 @end

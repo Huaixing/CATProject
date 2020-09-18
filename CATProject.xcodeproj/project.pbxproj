@@ -16,9 +16,10 @@
 		932EB45B25106C8900F640F6 /* cat_tab_bar_profile_selected_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932EB45525106C8800F640F6 /* cat_tab_bar_profile_selected_icon@2x.png */; };
 		932EB45C25106C8900F640F6 /* cat_tab_bar_profile_selected_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932EB45625106C8900F640F6 /* cat_tab_bar_profile_selected_icon@3x.png */; };
 		932EB46025106CEC00F640F6 /* ic_nav_act_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932EB45F25106CEC00F640F6 /* ic_nav_act_add@2x.png */; };
+		932EB4632510873F00F640F6 /* CATComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 932EB4622510873F00F640F6 /* CATComposeViewController.m */; };
+		932EB46A2510888000F640F6 /* CATComposePhotoModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 932EB4692510888000F640F6 /* CATComposePhotoModuleView.m */; };
 		936D466C2500868400E50367 /* CATNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 936D466B2500868400E50367 /* CATNavigationBar.m */; };
 		936D46732500CE5600E50367 /* CATButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 936D46722500CE5600E50367 /* CATButton.m */; };
-		936D46772500D5EC00E50367 /* NSString+CAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 936D46762500D5EC00E50367 /* NSString+CAT.m */; };
 		93A25C7D250342F600B19250 /* CATDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A25C7C250342F600B19250 /* CATDetailViewController.m */; };
 		93E4ED5F2501E6AD0080768F /* UIView+CATSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4ED5E2501E6AD0080768F /* UIView+CATSize.m */; };
 		93E4ED622501E6C30080768F /* NSString+CATSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4ED612501E6C30080768F /* NSString+CATSize.m */; };
@@ -56,12 +57,14 @@
 		932EB45525106C8800F640F6 /* cat_tab_bar_profile_selected_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat_tab_bar_profile_selected_icon@2x.png"; sourceTree = "<group>"; };
 		932EB45625106C8900F640F6 /* cat_tab_bar_profile_selected_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat_tab_bar_profile_selected_icon@3x.png"; sourceTree = "<group>"; };
 		932EB45F25106CEC00F640F6 /* ic_nav_act_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_nav_act_add@2x.png"; sourceTree = "<group>"; };
+		932EB4612510873F00F640F6 /* CATComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATComposeViewController.h; sourceTree = "<group>"; };
+		932EB4622510873F00F640F6 /* CATComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATComposeViewController.m; sourceTree = "<group>"; };
+		932EB4682510888000F640F6 /* CATComposePhotoModuleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATComposePhotoModuleView.h; sourceTree = "<group>"; };
+		932EB4692510888000F640F6 /* CATComposePhotoModuleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATComposePhotoModuleView.m; sourceTree = "<group>"; };
 		936D466A2500868400E50367 /* CATNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATNavigationBar.h; sourceTree = "<group>"; };
 		936D466B2500868400E50367 /* CATNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATNavigationBar.m; sourceTree = "<group>"; };
 		936D46712500CE5600E50367 /* CATButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATButton.h; sourceTree = "<group>"; };
 		936D46722500CE5600E50367 /* CATButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATButton.m; sourceTree = "<group>"; };
-		936D46752500D5EC00E50367 /* NSString+CAT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CAT.h"; sourceTree = "<group>"; };
-		936D46762500D5EC00E50367 /* NSString+CAT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CAT.m"; sourceTree = "<group>"; };
 		93A25C7B250342F600B19250 /* CATDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATDetailViewController.h; sourceTree = "<group>"; };
 		93A25C7C250342F600B19250 /* CATDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATDetailViewController.m; sourceTree = "<group>"; };
 		93E4ED5D2501E6AD0080768F /* UIView+CATSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CATSize.h"; sourceTree = "<group>"; };
@@ -142,6 +145,44 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		932EB4642510875300F640F6 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				93FE6D0824FE6ED60031FC9E /* CATHomeViewController.h */,
+				93FE6D0924FE6ED60031FC9E /* CATHomeViewController.m */,
+				93A25C7B250342F600B19250 /* CATDetailViewController.h */,
+				93A25C7C250342F600B19250 /* CATDetailViewController.m */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		932EB4652510876500F640F6 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				932EB4662510883D00F640F6 /* Controller */,
+				932EB4672510884A00F640F6 /* View */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		932EB4662510883D00F640F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				932EB4612510873F00F640F6 /* CATComposeViewController.h */,
+				932EB4622510873F00F640F6 /* CATComposeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		932EB4672510884A00F640F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				932EB4682510888000F640F6 /* CATComposePhotoModuleView.h */,
+				932EB4692510888000F640F6 /* CATComposePhotoModuleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		936D4668250084B900E50367 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +212,6 @@
 		936D46742500D5BD00E50367 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				936D46752500D5EC00E50367 /* NSString+CAT.h */,
-				936D46762500D5EC00E50367 /* NSString+CAT.m */,
 				93E4ED602501E6C30080768F /* NSString+CATSize.h */,
 				93E4ED612501E6C30080768F /* NSString+CATSize.m */,
 				93E4ED5D2501E6AD0080768F /* UIView+CATSize.h */,
@@ -238,10 +277,8 @@
 		93FE6D0324FE6E7F0031FC9E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				93FE6D0824FE6ED60031FC9E /* CATHomeViewController.h */,
-				93FE6D0924FE6ED60031FC9E /* CATHomeViewController.m */,
-				93A25C7B250342F600B19250 /* CATDetailViewController.h */,
-				93A25C7C250342F600B19250 /* CATDetailViewController.m */,
+				932EB4642510875300F640F6 /* Timeline */,
+				932EB4652510876500F640F6 /* Compose */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -294,7 +331,7 @@
 		93FE676B24FE116B0031FC9E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Shihuaixing;
 				TargetAttributes = {
 					93FE677224FE116B0031FC9E = {
@@ -393,10 +430,10 @@
 			files = (
 				936D46732500CE5600E50367 /* CATButton.m in Sources */,
 				93FE6D0724FE6EB40031FC9E /* CATBaseViewController.m in Sources */,
-				936D46772500D5EC00E50367 /* NSString+CAT.m in Sources */,
 				93E4ED622501E6C30080768F /* NSString+CATSize.m in Sources */,
 				93E4ED6525023E2B0080768F /* CATNaviButtonItem.m in Sources */,
 				93FE677824FE116B0031FC9E /* CATAppDelegate.m in Sources */,
+				932EB4632510873F00F640F6 /* CATComposeViewController.m in Sources */,
 				936D466C2500868400E50367 /* CATNavigationBar.m in Sources */,
 				93E4ED5F2501E6AD0080768F /* UIView+CATSize.m in Sources */,
 				93FE6D0A24FE6ED60031FC9E /* CATHomeViewController.m in Sources */,
@@ -405,6 +442,7 @@
 				93FE6D1124FE717D0031FC9E /* CATTabBarController.m in Sources */,
 				93FE6D1424FE71940031FC9E /* CATProfileViewController.m in Sources */,
 				93FE6D0E24FE716A0031FC9E /* CATNavigationController.m in Sources */,
+				932EB46A2510888000F640F6 /* CATComposePhotoModuleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +510,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -531,6 +570,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

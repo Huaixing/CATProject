@@ -48,7 +48,7 @@
 - (CATNavigationController *)subControllerWithRootController:(CATBaseViewController *)controller title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
     
     CATNavigationController *naviController = [[CATNavigationController alloc] initWithRootViewController:controller];
-    controller.navigationItem.title = title;
+    controller.titleString = title;
     controller.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     controller.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     controller.tabBarItem.title = title;
