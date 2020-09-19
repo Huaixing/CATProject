@@ -7,11 +7,12 @@
 //
 
 #import "CATHomeViewController.h"
-
-
 #import "CATComposeViewController.h"
+#import <CATPhotoKit/CATPhotoKit.h>
 
-@interface CATHomeViewController ()
+#import "CATNavigationController.h"
+
+@interface CATHomeViewController ()<CATPhotoPickerControllerDelegate>
 
 /**imageview*/
 @property (nonatomic, strong) UIImageView *imageView;
@@ -47,10 +48,19 @@
 }
 
 - (void)leftNaviButtonItemDidClick:(CATNaviButtonItem *)sender {
-    
-    CATComposeViewController *detail = [[CATComposeViewController alloc] init];
-    [self cat_presentVieController:detail animated:YES completion:nil];
-//    [self cat_pushVieController:detail animated:YES];
+    CATAlbumViewController *albumController = [[CATAlbumViewController alloc] init];
+    CATPhotoPickerController *pickController = [[CATPhotoPickerController alloc] initWithRootViewController:albumController];
+    pickController.picker = self;
+    [self cat_presentVieController:pickController animated:YES completion:nil];
+}
+
+#pragma mark - CATPhotoPickerControllerDelegate
+- (void)photoPickerController:(CATPhotoPickerController *)pickerController didFinishPickPhotos:(NSArray<CATPhoto *> *)selectedPhotos {
+    [pickerController dismissViewControllerAnimated:NO completion:nil];
+    if (selectedPhotos.count) {
+        CATComposeViewController *composeController = [[CATComposeViewController alloc] initWithPhotos:selectedPhotos];
+        [self cat_presentVieController:composeController animated:YES completion:nil];
+    }
 }
 
 @end

@@ -18,7 +18,20 @@ typedef NS_ENUM(NSInteger, CATButtonType) {
     CATButtonTypeCircleColor = 2,
 };
 
+/// 按钮的位置，在导航栏的左边还是右边
+typedef NS_ENUM(NSInteger, CATNavigationSide) {
+    /// left on navibar
+    CATNavigationSideLeft = 0,
+    /// right on navibar
+    CATNavigationSideRight = 1,
+};
+
+
+
 @interface CATNaviButtonItem : UIButton
+
+/// 导航栏按钮在导航栏哪一边
+@property (nonatomic, assign) CATNavigationSide naviSide;
 
 /// button
 /// @param imageName left image

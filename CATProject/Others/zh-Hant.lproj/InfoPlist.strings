@@ -6,4 +6,5 @@
   Copyright © 2020 Shihuaixing. All rights reserved.
 */
 
-CFBundleDisplayName = "愛寵";
+CFBundleDisplayName = "愛寵物";
+NSPhotoLibraryUsageDescription = "若不允许，你将无法在爱宠物内上传并发表本地相册照片";

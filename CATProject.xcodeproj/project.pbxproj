@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932BE08025162016008FACEA /* cat_compose_location_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932BE07E25162016008FACEA /* cat_compose_location_icon@3x.png */; };
+		932BE08125162016008FACEA /* cat_compose_location_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932BE07F25162016008FACEA /* cat_compose_location_icon@2x.png */; };
 		932EB443251064EC00F640F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 932EB445251064EC00F640F6 /* InfoPlist.strings */; };
 		932EB44A2510680500F640F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 932EB44C2510680500F640F6 /* Localizable.strings */; };
 		932EB45725106C8900F640F6 /* cat_navigation_bar_black_back_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932EB45125106C8800F640F6 /* cat_navigation_bar_black_back_icon@3x.png */; };
@@ -20,9 +22,9 @@
 		932EB46A2510888000F640F6 /* CATComposePhotoModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 932EB4692510888000F640F6 /* CATComposePhotoModuleView.m */; };
 		936D466C2500868400E50367 /* CATNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 936D466B2500868400E50367 /* CATNavigationBar.m */; };
 		936D46732500CE5600E50367 /* CATButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 936D46722500CE5600E50367 /* CATButton.m */; };
+		9390E8E72515FE8000A0DDD1 /* cat_compose_add_photo_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9390E8E52515FE7F00A0DDD1 /* cat_compose_add_photo_icon@3x.png */; };
+		9390E8E82515FE8000A0DDD1 /* cat_compose_add_photo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9390E8E62515FE8000A0DDD1 /* cat_compose_add_photo_icon@2x.png */; };
 		93A25C7D250342F600B19250 /* CATDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A25C7C250342F600B19250 /* CATDetailViewController.m */; };
-		93E4ED5F2501E6AD0080768F /* UIView+CATSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4ED5E2501E6AD0080768F /* UIView+CATSize.m */; };
-		93E4ED622501E6C30080768F /* NSString+CATSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4ED612501E6C30080768F /* NSString+CATSize.m */; };
 		93E4ED6525023E2B0080768F /* CATNaviButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4ED6425023E2B0080768F /* CATNaviButtonItem.m */; };
 		93FE677824FE116B0031FC9E /* CATAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FE677724FE116B0031FC9E /* CATAppDelegate.m */; };
 		93FE678324FE116F0031FC9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93FE678224FE116F0031FC9E /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		2BF4A8EBD34034F93E1A963C /* libPods-CATProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CATProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C297C5878AC43B2B573420F /* Pods-CATProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATProject.debug.xcconfig"; path = "Target Support Files/Pods-CATProject/Pods-CATProject.debug.xcconfig"; sourceTree = "<group>"; };
 		61F4BA30D109FAAEB1230943 /* Pods-CATProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATProject.release.xcconfig"; path = "Target Support Files/Pods-CATProject/Pods-CATProject.release.xcconfig"; sourceTree = "<group>"; };
+		932BE07E25162016008FACEA /* cat_compose_location_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat_compose_location_icon@3x.png"; sourceTree = "<group>"; };
+		932BE07F25162016008FACEA /* cat_compose_location_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat_compose_location_icon@2x.png"; sourceTree = "<group>"; };
 		932EB43D2510646500F640F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		932EB43E251064AA00F640F6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		932EB442251064D600F640F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -65,12 +69,10 @@
 		936D466B2500868400E50367 /* CATNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATNavigationBar.m; sourceTree = "<group>"; };
 		936D46712500CE5600E50367 /* CATButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATButton.h; sourceTree = "<group>"; };
 		936D46722500CE5600E50367 /* CATButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATButton.m; sourceTree = "<group>"; };
+		9390E8E52515FE7F00A0DDD1 /* cat_compose_add_photo_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat_compose_add_photo_icon@3x.png"; sourceTree = "<group>"; };
+		9390E8E62515FE8000A0DDD1 /* cat_compose_add_photo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat_compose_add_photo_icon@2x.png"; sourceTree = "<group>"; };
 		93A25C7B250342F600B19250 /* CATDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATDetailViewController.h; sourceTree = "<group>"; };
 		93A25C7C250342F600B19250 /* CATDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATDetailViewController.m; sourceTree = "<group>"; };
-		93E4ED5D2501E6AD0080768F /* UIView+CATSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CATSize.h"; sourceTree = "<group>"; };
-		93E4ED5E2501E6AD0080768F /* UIView+CATSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CATSize.m"; sourceTree = "<group>"; };
-		93E4ED602501E6C30080768F /* NSString+CATSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CATSize.h"; sourceTree = "<group>"; };
-		93E4ED612501E6C30080768F /* NSString+CATSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CATSize.m"; sourceTree = "<group>"; };
 		93E4ED6325023E2B0080768F /* CATNaviButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATNaviButtonItem.h; sourceTree = "<group>"; };
 		93E4ED6425023E2B0080768F /* CATNaviButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATNaviButtonItem.m; sourceTree = "<group>"; };
 		93FE677324FE116B0031FC9E /* CATProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 		932EB44F25106C2D00F640F6 /* ImageResources */ = {
 			isa = PBXGroup;
 			children = (
+				9390E8E42515FCF400A0DDD1 /* Compose */,
 				932EB45025106C4D00F640F6 /* Common */,
 			);
 			path = ImageResources;
@@ -212,12 +215,19 @@
 		936D46742500D5BD00E50367 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				93E4ED602501E6C30080768F /* NSString+CATSize.h */,
-				93E4ED612501E6C30080768F /* NSString+CATSize.m */,
-				93E4ED5D2501E6AD0080768F /* UIView+CATSize.h */,
-				93E4ED5E2501E6AD0080768F /* UIView+CATSize.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		9390E8E42515FCF400A0DDD1 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				932BE07F25162016008FACEA /* cat_compose_location_icon@2x.png */,
+				932BE07E25162016008FACEA /* cat_compose_location_icon@3x.png */,
+				9390E8E62515FE8000A0DDD1 /* cat_compose_add_photo_icon@2x.png */,
+				9390E8E52515FE7F00A0DDD1 /* cat_compose_add_photo_icon@3x.png */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 		93FE676A24FE116B0031FC9E = {
@@ -366,8 +376,12 @@
 			files = (
 				932EB44A2510680500F640F6 /* Localizable.strings in Resources */,
 				932EB46025106CEC00F640F6 /* ic_nav_act_add@2x.png in Resources */,
+				9390E8E82515FE8000A0DDD1 /* cat_compose_add_photo_icon@2x.png in Resources */,
 				932EB45B25106C8900F640F6 /* cat_tab_bar_profile_selected_icon@2x.png in Resources */,
+				932BE08125162016008FACEA /* cat_compose_location_icon@2x.png in Resources */,
 				93FE678624FE116F0031FC9E /* LaunchScreen.storyboard in Resources */,
+				9390E8E72515FE8000A0DDD1 /* cat_compose_add_photo_icon@3x.png in Resources */,
+				932BE08025162016008FACEA /* cat_compose_location_icon@3x.png in Resources */,
 				932EB45825106C8900F640F6 /* cat_tab_bar_profile_unselected_icon@2x.png in Resources */,
 				932EB45C25106C8900F640F6 /* cat_tab_bar_profile_selected_icon@3x.png in Resources */,
 				932EB45725106C8900F640F6 /* cat_navigation_bar_black_back_icon@3x.png in Resources */,
@@ -430,12 +444,10 @@
 			files = (
 				936D46732500CE5600E50367 /* CATButton.m in Sources */,
 				93FE6D0724FE6EB40031FC9E /* CATBaseViewController.m in Sources */,
-				93E4ED622501E6C30080768F /* NSString+CATSize.m in Sources */,
 				93E4ED6525023E2B0080768F /* CATNaviButtonItem.m in Sources */,
 				93FE677824FE116B0031FC9E /* CATAppDelegate.m in Sources */,
 				932EB4632510873F00F640F6 /* CATComposeViewController.m in Sources */,
 				936D466C2500868400E50367 /* CATNavigationBar.m in Sources */,
-				93E4ED5F2501E6AD0080768F /* UIView+CATSize.m in Sources */,
 				93FE6D0A24FE6ED60031FC9E /* CATHomeViewController.m in Sources */,
 				93FE678924FE116F0031FC9E /* main.m in Sources */,
 				93A25C7D250342F600B19250 /* CATDetailViewController.m in Sources */,

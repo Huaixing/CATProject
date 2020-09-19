@@ -42,5 +42,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>若不允许，你将无法在爱宠物内上传并发表本地相册照片</string>
 </dict>
 </plist>

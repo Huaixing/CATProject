@@ -8,6 +8,16 @@
 
 #import "CATComposePhotoModuleView.h"
 
+@implementation CATComposePhotoView
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.userInteractionEnabled = YES;
+    }
+    return self;
+}
+@end
+
 @implementation CATComposePhotoModuleView
 
 - (instancetype)initWithDelegate:(id<CATComposePhotoModuleViewDelegate>)delegate {

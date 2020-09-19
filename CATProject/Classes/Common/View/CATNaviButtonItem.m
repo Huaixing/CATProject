@@ -26,6 +26,9 @@ typedef NS_ENUM(NSInteger, CATPositionType) {
 @property (nonatomic, strong) UILabel *textLabel;
 /// image view
 @property (nonatomic, strong) UIImageView *iconView;
+/// content view
+@property (nonatomic, strong) UIView *contentView;
+
 
 /// text and icon margin, == 3
 @property (nonatomic, assign, readonly) CGFloat margin;
@@ -88,14 +91,15 @@ typedef NS_ENUM(NSInteger, CATPositionType) {
     CGFloat buttonHeight = self.height;
     if (buttonHeight < 0) buttonHeight = 0;
     
+    self.contentView.height = buttonHeight;
+    self.contentView.x = 0;
+    
     if (self.textLabel && self.iconView) {
-        CGFloat margin = self.margin;// margin between icon and text
-        // text width
-        CGSize textSize = [self.textLabel.text cat_sizeWithFont:self.textLabel.font textHeight:24 limitSize:CGSizeMake(buttonWidth, buttonHeight)];
-        self.textLabel.width = textSize.width;
-        self.textLabel.height = buttonHeight;
+        // margin between icon and text
+        CGFloat margin = self.margin;
+        self.textLabel.height = self.contentView.height;
         self.textLabel.y = 0;
-        self.iconView.centerY = buttonHeight / 2.0;
+        self.iconView.centerY = self.contentView.height / 2.0;
         
         if (self.positionType == CATPositionTypeLIRT) {
             // left icon, right text
@@ -105,22 +109,29 @@ typedef NS_ENUM(NSInteger, CATPositionType) {
             // left text, right icon
             self.textLabel.x = 0;
             self.iconView.x = self.textLabel.right + margin;
-            
         }
     } else {
         if (self.textLabel) {
             // text width
-            CGSize textSize = [self.textLabel.text cat_sizeWithFont:self.textLabel.font textHeight:24 limitSize:CGSizeMake(buttonWidth, buttonHeight)];
-            self.textLabel.width = textSize.width;
-            self.textLabel.height = buttonHeight;
-            self.textLabel.x = 0;
-            
+            self.textLabel.height = self.contentView.height;
         } else if (self.iconView) {
-            self.iconView.x = 0;
-            self.iconView.centerY = buttonHeight / 2.0;
+            self.iconView.centerY = self.contentView.height / 2.0;
         } else {
             // all sub view is hidden
         }
+    }
+    
+    if (self.type == CATButtonTypeNormal) {
+        if (self.naviSide == CATNavigationSideLeft) {
+            // 居左
+            self.contentView.x = 0;
+        } else {
+            // 居右
+            self.contentView.right = self.width;
+        }
+    } else {
+        // 居中
+        self.contentView.centerX = self.width / 2.0;
     }
 }
 
@@ -134,13 +145,20 @@ typedef NS_ENUM(NSInteger, CATPositionType) {
     self.clipsToBounds = YES;
     self.exclusiveTouch = YES;
     
+    
+    UIView *contentView = [[UIView alloc] init];
+    contentView.backgroundColor = [UIColor clearColor];
+    contentView.userInteractionEnabled = NO;
+    [self addSubview:contentView];
+    self.contentView = contentView;
     if (title.length) {
         UILabel *textLabel = [[UILabel alloc] init];
         textLabel.backgroundColor = [UIColor clearColor];
         textLabel.text = title;
         textLabel.font = [UIFont systemFontOfSize:16];
         textLabel.textColor = COLOR_HEX(0x181818);
-        [self addSubview:textLabel];
+        textLabel.textAlignment = NSTextAlignmentCenter;
+        [contentView addSubview:textLabel];
         self.textLabel = textLabel;
     }
     
@@ -149,24 +167,28 @@ typedef NS_ENUM(NSInteger, CATPositionType) {
         if (icon) {
             UIImageView *iconView = [[UIImageView alloc] initWithImage:icon];
             iconView.backgroundColor = [UIColor clearColor];
-            [self addSubview:iconView];
+            [contentView addSubview:iconView];
             self.iconView = iconView;
         }
     }
+    
     // 设置默认宽度
     if (self.textLabel && self.iconView) {
-        CGSize textSize = [self.textLabel.text cat_sizeWithFont:self.textLabel.font textHeight:24 limitSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 44)];
-        self.width = textSize.width + self.margin + self.iconView.width;
+        CGFloat textWidth = [self.textLabel.text cat_sizeWithFont:self.textLabel.font];
+        self.textLabel.width = textWidth;
+        self.width = textWidth + self.margin + self.iconView.width;
     } else {
         if (self.textLabel) {
-            CGSize textSize = [self.textLabel.text cat_sizeWithFont:self.textLabel.font textHeight:24 limitSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 44)];
-            self.width = textSize.width;
+            CGFloat textWidth = [self.textLabel.text cat_sizeWithFont:self.textLabel.font];
+            self.textLabel.width = textWidth;
+            self.width = textWidth;
         } else if (self.iconView) {
             self.width = self.iconView.width;
         } else {
             // all sub view is hidden
         }
     }
+    self.contentView.width = self.width;
 }
 
 - (void)setupButtonType {

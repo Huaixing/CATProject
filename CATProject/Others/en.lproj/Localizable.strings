@@ -8,3 +8,10 @@
 
 "ipets_tab_bar_home" = "Home";
 "ipets_tab_bar_profile" = "Profile";
+
+
+
+"ipets_compose_title_string" = "New Moment";
+"ipets_compose_left_canel_string" = "Cancel";
+"ipets_compose_right_save_string" = "Save";
+"ipets_compose_text_placeholder_string" = "Say something...";

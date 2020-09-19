@@ -20,7 +20,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.leftNaviButtonItem = [[CATNaviButtonItem alloc] initWithImageName:@"cat_navigation_bar_black_back_icon" title:nil];
+//        self.leftNaviButtonItem = [[CATNaviButtonItem alloc] initWithImageName:@"cat_navigation_bar_black_back_icon" title:nil];
     }
     return self;
 }
@@ -42,8 +42,13 @@
     [super viewDidAppear:animated];
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+}
+
+- (void)dealloc {
+    NSLog(@"%@ ----- dealloc", NSStringFromClass([self class]));
 }
 
 #pragma mark - Private
@@ -104,23 +109,28 @@
     [self setupNavigationBarContent];
 }
 
-- (void)cat_pushVieController:(CATBaseViewController *)controller animated:(BOOL)animated {
+- (void)cat_pushVieController:(UIViewController *)controller animated:(BOOL)animated {
     [self.navigationController pushViewController:controller animated:animated];
 }
 
-- (void)cat_presentVieController:(CATBaseViewController *)controller animated:(BOOL)animated completion:(void (^)(void))completion {
+- (void)cat_presentVieController:(UIViewController *)controller animated:(BOOL)animated completion:(void (^)(void))completion {
     
-    controller.modalPresentationStyle = UIModalPresentationFullScreen;
     if (![controller isKindOfClass:[UINavigationController class]]) {
         CATNavigationController *navi = [[CATNavigationController alloc] initWithRootViewController:controller];
+        navi.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:navi animated:animated completion:completion];
     } else {
+        controller.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:controller animated:animated completion:completion];
     }
 }
 
 #pragma mark - Action
 - (void)leftNaviButtonItemDidClick:(CATNaviButtonItem *)sender {
+    
+}
+
+- (void)rightNaviButtonItemDidClick:(CATNaviButtonItem *)sender {
     
 }
 @end

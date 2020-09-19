@@ -7,11 +7,19 @@
 //
 
 #import "CATBaseViewController.h"
-
-NS_ASSUME_NONNULL_BEGIN
+#import <CATPhotoKit/CATPhotoKit.h>
 
 @interface CATComposeViewController : CATBaseViewController
 
+- (instancetype)initWithPhotos:(NSArray<CATPhoto *> *)photos;
+/// 选择照片最大数量, default 9
+@property (nonatomic, assign) NSUInteger photoViewMaxCount;
+/// 照片布局列数，default 3
+@property (nonatomic, assign) NSUInteger photoViewColumn;
+/// 照片部分距离左右边距，default 24
+@property (nonatomic, assign) NSUInteger photoModuleInset;
+/// 照片之间间距（上下，左右），default 8
+@property (nonatomic, assign) NSUInteger photoViewMargin;
+
 @end
 
-NS_ASSUME_NONNULL_END

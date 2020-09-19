@@ -7,3 +7,4 @@
 */
 
 CFBundleDisplayName = "iPets";
+NSPhotoLibraryUsageDescription = "若不允许，你将无法在爱宠物内上传并发表本地相册照片";

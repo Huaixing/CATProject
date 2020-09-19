@@ -81,8 +81,10 @@
         _leftButtonItem.x = CAT_NAVI_BUTTON_ITEM_MARGIN;
     }
     if (_rightButtonItem) {
-        _rightButtonItem.frame = CGRectMake(0, 0, 44, self.naviBar.height);
-        _rightButtonItem.right = self.naviBar.width;
+        _rightButtonItem.width = MAX(ceil(_rightButtonItem.width), self.naviBar.height);
+        _rightButtonItem.height = self.naviBar.height;
+        _rightButtonItem.right = self.naviBar.width - CAT_NAVI_BUTTON_ITEM_MARGIN;
+        
     }
 }
 
@@ -157,6 +159,22 @@
     }
     [self.naviBar addSubview:leftButtonItem];
     _leftButtonItem = leftButtonItem;
+    _leftButtonItem.naviSide = CATNavigationSideLeft;
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+}
+
+- (void)setRightButtonItem:(CATNaviButtonItem *)rightButtonItem {
+    if (_rightButtonItem == rightButtonItem) {
+        return;
+    }
+    if (_rightButtonItem) {
+        [_rightButtonItem removeFromSuperview];
+        _rightButtonItem = nil;
+    }
+    [self.naviBar addSubview:rightButtonItem];
+    _rightButtonItem = rightButtonItem;
+    _rightButtonItem.naviSide = CATNavigationSideRight;
     [self setNeedsLayout];
     [self layoutIfNeeded];
 }

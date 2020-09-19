@@ -29,13 +29,14 @@
 
 
 ///  push controller
-- (void)cat_pushVieController:(CATBaseViewController *)controller animated:(BOOL)animated;
+- (void)cat_pushVieController:(UIViewController *)controller animated:(BOOL)animated;
 ///  present controller
-- (void)cat_presentVieController:(CATBaseViewController *)controller animated:(BOOL)animated completion:(void (^)(void))completion;
+- (void)cat_presentVieController:(UIViewController *)controller animated:(BOOL)animated completion:(void (^)(void))completion;
 
 
 #pragma mark - Action
 - (void)leftNaviButtonItemDidClick:(CATNaviButtonItem *)sender;
+- (void)rightNaviButtonItemDidClick:(CATNaviButtonItem *)sender;
 
 @end
 
