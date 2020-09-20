@@ -9,6 +9,7 @@
 #import "CATBaseViewController.h"
 #import "CATNavigationController.h"
 #import "CATNavigationBar.h"
+#import <CATCommonKit/UIView+CATSize.h>
 
 @interface CATBaseViewController ()
 
@@ -28,6 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _navigationBar = [[CATNavigationBar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), self.navigationController.navigationBar.height + CGRectGetHeight([UIApplication sharedApplication].statusBarFrame))];
+    _navigationBar.bottom = self.navigationController.navigationBar.height;
+    [self.navigationController.navigationBar addSubview:_navigationBar];
+    
     self.view.backgroundColor = COLOR_CONTROLLER_BACKGROUND;
 }
 
@@ -48,6 +53,10 @@
 }
 
 - (void)dealloc {
+    if (_navigationBar) {
+        [_navigationBar removeFromSuperview];
+        _navigationBar = nil;
+    }
     NSLog(@"%@ ----- dealloc", NSStringFromClass([self class]));
 }
 
@@ -79,17 +88,6 @@
 }
 
 #pragma mark - Public
-
-- (CATNavigationBar *)navigationBar {
-    if (self.navigationController) {
-        BOOL iscatNaviClass = [self.navigationController isKindOfClass:[CATNavigationController class]];
-        if (iscatNaviClass) {
-            CATNavigationController *catNaviController = (CATNavigationController *)self.navigationController;
-            return catNaviController.navigatorBar;
-        }
-    }
-    return nil;
-}
 
 - (void)setTitleString:(NSString *)titleString {
     if ([_titleString isEqualToString:titleString]) {

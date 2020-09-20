@@ -8,14 +8,19 @@
 
 #import "CATHomeViewController.h"
 #import "CATComposeViewController.h"
+#import "CATDetailViewController.h"
 #import <CATPhotoKit/CATPhotoKit.h>
 
 #import "CATNavigationController.h"
 
-@interface CATHomeViewController ()<CATPhotoPickerControllerDelegate>
+#import "CATHomeMomentCell.h"
+#import "CATHomeMomentLayout.h"
 
-/**imageview*/
-@property (nonatomic, strong) UIImageView *imageView;
+@interface CATHomeViewController ()<CATPhotoPickerControllerDelegate>
+/// tableview
+@property (nonatomic, strong) UITableView *tableView;
+/// moment layout list
+@property (nonatomic, strong) NSMutableArray<CATHomeMomentLayout *> *momentLayouts;
 @end
 
 @implementation CATHomeViewController
@@ -33,13 +38,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 88, 100, 200)];
-    [self.view addSubview:_imageView];
-    
-    
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://testlib.qbb6.com/content/1847783988641_97fa7e68935b.png"]];
-    UIImage *image = [UIImage imageWithData:data];
-    _imageView.image = image;
+    [self.view addSubview:self.tableView];
     
 }
 
@@ -47,11 +46,22 @@
     [super viewWillAppear:animated];
 }
 
+#pragma mark - Private
+- (NSMutableArray<CATHomeMomentLayout *> *)momentLayouts {
+    if (!_momentLayouts) {
+        _momentLayouts = [[NSMutableArray alloc] init];
+    }
+    return _momentLayouts;
+}
+
+#pragma mark - Action
 - (void)leftNaviButtonItemDidClick:(CATNaviButtonItem *)sender {
     CATAlbumViewController *albumController = [[CATAlbumViewController alloc] init];
     CATPhotoPickerController *pickController = [[CATPhotoPickerController alloc] initWithRootViewController:albumController];
     pickController.picker = self;
     [self cat_presentVieController:pickController animated:YES completion:nil];
+//    CATDetailViewController *detail = [[CATDetailViewController alloc] init];
+//    [self cat_pushVieController:detail animated:YES];
 }
 
 #pragma mark - CATPhotoPickerControllerDelegate
@@ -63,4 +73,12 @@
     }
 }
 
+
+#pragma mark - Getter
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    }
+    return _tableView;
+}
 @end

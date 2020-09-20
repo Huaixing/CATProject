@@ -22,9 +22,13 @@
 
 @implementation CATDetailViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.titleString = @"正文";
     
     _textView = [[CATTextView alloc] initWithFrame:CGRectMake(0, 100, self.view.width, 300)];
     _textView.backgroundColor = [UIColor lightGrayColor];

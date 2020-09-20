@@ -11,8 +11,6 @@
 
 
 @interface CATNavigationController : UINavigationController
-/// custom navigation bar
-@property (nonatomic, strong, readonly) CATNavigationBar *navigatorBar;
 
 @end
 

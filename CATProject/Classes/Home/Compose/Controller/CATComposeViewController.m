@@ -361,7 +361,7 @@
         _locationTitleLabel.backgroundColor = [UIColor redColor];
         _locationTitleLabel.text = @"LocationLocationLocationLocationLocationLocationLocationLocationLocationLocationLocationLocationLocationLocation";
         _locationTitleLabel.textColor = [UIColor blackColor];
-        [_locationTitleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+//        [_locationTitleLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
     }
     return _locationTitleLabel;
 }
@@ -372,7 +372,7 @@
         _locationContentLabel.backgroundColor = [UIColor blueColor];
         _locationContentLabel.text = @"starbucks";
         _locationContentLabel.textColor = [UIColor blackColor];
-        [_locationContentLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+//        [_locationContentLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
     }
     return _locationContentLabel;
 }
