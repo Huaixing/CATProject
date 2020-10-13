@@ -1,30 +1,35 @@
 PODS:
-  - CATCommonKit (0.1.6)
-  - CATPhotoKit (0.1.4):
-    - CATCommonKit (~> 0.1.5)
-  - CATTextKit (0.1.7):
-    - CATCommonKit (~> 0.1.5)
+  - CATCommonKit (0.2.2):
+    - MBProgressHUD (~> 1.2.0)
+  - CATPhotoKit (0.1.6):
+    - CATCommonKit (~> 0.2.0)
+    - MBProgressHUD (~> 1.2.0)
+  - CATTextKit (0.1.8):
+    - CATCommonKit (~> 0.2.0)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
 
 DEPENDENCIES:
-  - CATPhotoKit (= 0.1.4)
-  - CATTextKit (= 0.1.7)
+  - CATPhotoKit (= 0.1.6)
+  - CATTextKit (= 0.1.8)
   - Masonry (~> 1.1.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Masonry
+    - MBProgressHUD
   https://github.com/Huaixing/CATMasterRepos.git:
     - CATCommonKit
     - CATPhotoKit
     - CATTextKit
 
 SPEC CHECKSUMS:
-  CATCommonKit: 1698824bd4fec2a2fc362af404d002dd081775ef
-  CATPhotoKit: 1a256491f529c1eb08e7a1f47b860801d1c33feb
-  CATTextKit: c9f76be3ed16df9a554b0862e137242f71ead042
+  CATCommonKit: d803ae59d5d6bb74b8aff572a51f2b1bdfec187f
+  CATPhotoKit: 349e62e544b3060854fdafa3376c84d917ebfd0d
+  CATTextKit: a8add911c03188a98f0272b6d424227f53a27a44
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
-PODFILE CHECKSUM: 9af2739ad39231e27218f863fa4d3b88ccc50fb5
+PODFILE CHECKSUM: 6a18d1d57fe07bcf420d33e871794ee27cd6371b
 
 COCOAPODS: 1.9.3

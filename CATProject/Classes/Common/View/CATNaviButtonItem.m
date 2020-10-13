@@ -8,7 +8,7 @@
 
 #import "CATNaviButtonItem.h"
 #import "NSString+CATSize.h"
-#import "UIView+CATSize.h"
+#import <CATCommonKit/CATCommonKit.h>
 #import "CATCommonMacro.h"
 
 
@@ -156,7 +156,7 @@ typedef NS_ENUM(NSInteger, CATPositionType) {
         textLabel.backgroundColor = [UIColor clearColor];
         textLabel.text = title;
         textLabel.font = [UIFont systemFontOfSize:16];
-        textLabel.textColor = COLOR_HEX(0x181818);
+        textLabel.textColor = [UIColor colorWithHexString:@"0x181818"];
         textLabel.textAlignment = NSTextAlignmentCenter;
         [contentView addSubview:textLabel];
         self.textLabel = textLabel;
@@ -174,12 +174,12 @@ typedef NS_ENUM(NSInteger, CATPositionType) {
     
     // 设置默认宽度
     if (self.textLabel && self.iconView) {
-        CGFloat textWidth = [self.textLabel.text cat_sizeWithFont:self.textLabel.font];
+        CGFloat textWidth = [self.textLabel.text cat_widthWithFont:self.textLabel.font];
         self.textLabel.width = textWidth;
         self.width = textWidth + self.margin + self.iconView.width;
     } else {
         if (self.textLabel) {
-            CGFloat textWidth = [self.textLabel.text cat_sizeWithFont:self.textLabel.font];
+            CGFloat textWidth = [self.textLabel.text cat_widthWithFont:self.textLabel.font];
             self.textLabel.width = textWidth;
             self.width = textWidth;
         } else if (self.iconView) {
@@ -200,7 +200,7 @@ typedef NS_ENUM(NSInteger, CATPositionType) {
         case CATButtonTypeCircleLayer:
             self.backgroundColor = [UIColor clearColor];
             self.layer.cornerRadius = CGRectGetHeight(self.frame) / 2.f;
-            self.layer.borderColor = COLOR_HEX(0x666666).CGColor;
+            self.layer.borderColor = [UIColor colorWithHexString:@"0x666666"].CGColor;
             self.layer.borderWidth = 1.0 / [UIScreen mainScreen].scale;
             break;
         default:

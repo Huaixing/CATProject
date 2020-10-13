@@ -9,7 +9,7 @@
 #import "CATBaseViewController.h"
 #import "CATNavigationController.h"
 #import "CATNavigationBar.h"
-#import <CATCommonKit/UIView+CATSize.h>
+#import <CATCommonKit/CATCommonKit.h>
 
 @interface CATBaseViewController ()
 
@@ -33,7 +33,7 @@
     _navigationBar.bottom = self.navigationController.navigationBar.height;
     [self.navigationController.navigationBar addSubview:_navigationBar];
     
-    self.view.backgroundColor = COLOR_CONTROLLER_BACKGROUND;
+    self.view.backgroundColor = [UIColor colorWithHexString:@"0xF5F5F5"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -162,7 +162,7 @@
             if (photo.asset == nil) {
                 imageView.image = [UIImage imageNamed:@"cat_compose_add_photo_icon"];
                 imageView.contentMode = UIViewContentModeCenter;
-                imageView.backgroundColor = COLOR_HEX(0xF7F7FB);
+                imageView.backgroundColor = [UIColor colorWithHexString:@"0xF7F7FB"];
             } else {
                 imageView.backgroundColor = [UIColor clearColor];
                 imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -334,7 +334,7 @@
         _textView.contentInset = UIEdgeInsetsMake(0, 0, 24, 0);
         _textView.placeHolder = NSLocalizedString(@"ipets_compose_text_placeholder_string", nil);
         _textView.placeHolderFont = [UIFont systemFontOfSize:16];
-        _textView.placeHolderColor = COLOR_HEX(0x69707F);
+        _textView.placeHolderColor = [UIColor colorWithHexString:@"0x69707F"];
     }
     return _textView;
 }

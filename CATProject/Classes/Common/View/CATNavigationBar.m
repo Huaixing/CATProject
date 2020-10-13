@@ -9,7 +9,7 @@
 #import "CATNavigationBar.h"
 #import "CATCommonMacro.h"
 #import "CATNaviButtonItem.h"
-#import "UIView+CATSize.h"
+#import <CATCommonKit/CATCommonKit.h>
 
  /// 导航栏按钮距离左右按钮间距
 #define CAT_NAVI_BUTTON_ITEM_MARGIN        (16)
@@ -141,7 +141,7 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
         _titleLabel.backgroundColor = [UIColor clearColor];
-        _titleLabel.textColor = COLOR_HEX(0x181818);
+        _titleLabel.textColor = [UIColor colorWithHexString:@"0x181818"];
         _titleLabel.font = [UIFont boldSystemFontOfSize:17];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
